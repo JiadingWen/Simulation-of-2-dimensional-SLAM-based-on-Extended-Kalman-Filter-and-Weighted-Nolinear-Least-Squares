@@ -3,11 +3,10 @@
 |![image](https://github.com/JiadingWen/Manipulator_RoboticsToolBox/blob/master/img/ScreenShot1.gif)|![image](https://github.com/JiadingWen/Manipulator_RoboticsToolBox/blob/master/img/ScreenShot2.gif)|
 | - | :-: |
 
-<p align="center">
-Blue circle is real pose of the robot, red circle is estimated pose of the robot
+<p align="center">Blue circle is real pose of the robot, red circle is estimated pose of the robot</p>
+<p align="center">Two blue stars are real position of the features, two red stars are estimated position of the features</p>
 
-Two blue stars are real position of the features, two red stars are estimated position of the features
-</p>
+
 
 ***
 ## Introduction
