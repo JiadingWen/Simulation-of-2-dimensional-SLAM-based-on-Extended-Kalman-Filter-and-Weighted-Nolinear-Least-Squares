@@ -18,7 +18,7 @@ variance_noise = StandardDeviation_noise^2; % 噪音的方差
 %% 生成 RealData
 
 % 预分配内存
-max_DataSize = 200;                            % 设置真实数据的行数, i.e.节点数量
+max_DataSize = 100;                            % 设置真实数据的行数, i.e.节点数量
 RealData = zeros(max_DataSize,22);           % 十一列分别为:节点 时间节点 时间周期 
                                              % RobotState 4~6 控制输入   7~8 实际控制噪音 9~10
                                              % feature1 11~12 观测噪音1 13~14 观测数据1 15~16 
@@ -32,12 +32,12 @@ RealData(1,1) = 0;                                                          % 节
 RealData(1,2) = 0;                                                          % 时间 从0s开始
 RealData(1,3) = 1;                                                          % 时间周期 周期固定为1s
 
-RealData(1,4) = 0;                                                          % RobotState 从(0,0,0)开始
+RealData(1,4) = 5;                                                          % RobotState 从(0,0,0)开始
 RealData(1,5) = 0;
 RealData(1,6) = 0;                                                          % 以上分别为 x y phi
 
-RealData(1,7) = 10;                                                         % 控制输入 linear 固定为10 即 每秒前进10m
-RealData(1,8) = pi/2;                                                       % 控制输入 angular 固定为 90 
+RealData(1,7) = 10*pi/16;                                                         % 控制输入 linear 固定为10 即 每秒前进10m
+RealData(1,8) = 2*pi/16;                                                       % 控制输入 angular 固定为 90 
 RealData(1,9) = normrnd(mean_noise,StandardDeviation_noise,1);              % 控制噪音 linear 服从高斯分布 0 mean 0.1^2 variance 
 RealData(1,10) = normrnd(mean_noise,StandardDeviation_noise,1);             % 控制噪音 angular 服从高斯分布 0 mean 0.1^2 variance 
 
@@ -68,8 +68,8 @@ for i = 2:max_DataSize
     RealData(i,5) = RealData(i-1,5) + (RealData(i-1,7)+ RealData(i-1,9))*RealData(i-1,3)*sin(RealData(i-1,6));
     RealData(i,6) = S_Wrap(RealData(i-1,6) + (RealData(i-1,8)+ RealData(i-1,10))*RealData(i-1,3));
     
-    RealData(i,7) = 10;                                                         % 控制输入 linear 固定为10 即 每秒前进10m
-    RealData(i,8) = pi/2;                                                       % 控制输入 angular 固定为 90 
+    RealData(i,7) = RealData(1,7);                                              % 控制输入 linear 固定为10 即 每秒前进10m
+    RealData(i,8) = RealData(1,8);                                              % 控制输入 angular 固定为 90 
     RealData(i,9) = normrnd(mean_noise,StandardDeviation_noise,1);              % 控制噪音 linear 服从高斯分布 0 mean 0.1^2 variance 
     RealData(i,10) = normrnd(mean_noise,StandardDeviation_noise,1);             % 控制噪音 angular 服从高斯分布 0 mean 0.1^2 variance 
 

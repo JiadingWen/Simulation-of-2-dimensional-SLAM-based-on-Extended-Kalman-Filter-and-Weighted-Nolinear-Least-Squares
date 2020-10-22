@@ -24,7 +24,7 @@ variance_noise = StandardDeviation_noise^2; % 噪音的方差
 %% 加载初值
 
 % 设置Robot初始位置为原点
-x_r_0 = 0;
+x_r_0 = 5;
 y_r_0 = 0;
 phi_r_0 = 0;
 
@@ -62,8 +62,8 @@ P_EKF_00 = J_F0_X*P*J_F0_X';
 
 % 可视化
 figure(1)
-xlim([-10 17])
-ylim([-10 20])
+xlim([-5 17])
+ylim([-5 20])
 hold on
 plot(X_EKF_00(1,1),X_EKF_00(2,1),'ro');
 length = 0.5;
@@ -202,11 +202,16 @@ for i = 1:(size(NormalData,1) - 1)
     %% 可视化
 
     % real feature
+    % hold on
     plot(RealData(1,11),RealData(1,12),'b*');
     hold on
-    xlim([-10 17])
-    ylim([-10 20])
+    xlim([-5 17])
+    ylim([-5 20])
     plot(RealData(1,17),RealData(1,18),'b*');
+    
+    % estimated feature
+    plot(X_EKF_KK(4,1),X_EKF_KK(5,1),'r*');
+    plot(X_EKF_KK(6,1),X_EKF_KK(7,1),'r*'); 
     
     % estimated state
     plot(X_EKF_KK(1,1),X_EKF_KK(2,1),'ro');
@@ -219,7 +224,7 @@ for i = 1:(size(NormalData,1) - 1)
     length = 0.5;
     plot([RealData(i+1,4),RealData(i+1,4) + length*cos(RealData(i+1,6))],[RealData(i+1,5), RealData(i+1,5) + length*sin(RealData(i+1,6))],'b')
     hold off
-    pause(0.5)
+    pause(0.2)
     
     %% disp final error
 
@@ -235,14 +240,6 @@ for i = 1:(size(NormalData,1) - 1)
 
 end
 
-%% 可视化
-
-% estimated feature
-hold on
-xlim([-10 17])
-ylim([-10 20])
-plot(X_EKF_KK(4,1),X_EKF_KK(5,1),'r*');
-plot(X_EKF_KK(6,1),X_EKF_KK(7,1),'r*'); 
 
 
 
