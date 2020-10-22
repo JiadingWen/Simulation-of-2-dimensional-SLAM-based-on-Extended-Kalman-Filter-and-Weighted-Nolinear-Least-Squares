@@ -6,9 +6,8 @@
 <p align="center">Blue circle is real pose of the robot, red circle is estimated pose of the robot</p>
 <p align="center">Two blue stars are real position of the features, two red stars are estimated position of the features</p>
 
-
-
 ***
+
 ## Introduction
 
 Simulating a 2D map with two features and a robot that rotating around feature 1 in matlab. (The robot can observe angle and distance of two features relative to itself). 
