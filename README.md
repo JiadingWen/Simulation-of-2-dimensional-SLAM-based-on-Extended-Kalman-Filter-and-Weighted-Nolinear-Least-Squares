@@ -12,9 +12,9 @@
 
 Simulating a 2D map with two features and a robot that rotating around feature 1 in matlab. (The robot can observe angle and distance of two features relative to itself). 
 
-Using observation data and control data to estimate the pose of the robot and the position of two features based on Extended Kalman Filter (EKF) and Weighted Nolinear Least Squares (WNLS) respectively (i.e. solving a simple 2D SLAM by EKF and WNLP).
+Using observation data and control data to estimate the pose of the robot and the position of two features based on **Extended Kalman Filter (EKF)** and **Weighted Nolinear Least Squares (WNLS)** respectively (i.e.~ solving a simple 2D SLAM by EKF and WNLP~).
 
-> [Simultaneous Localization And Mapping](http://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping) (SLAM): is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it. 
+> [**Simultaneous Localization And Mapping**](http://en.wikipedia.org/wiki/Simultaneous_localization_and_mapping) (SLAM): is the computational problem of constructing or updating a map of an unknown environment while simultaneously keeping track of an agent's location within it. 
 
 ## Prerequisites
 
