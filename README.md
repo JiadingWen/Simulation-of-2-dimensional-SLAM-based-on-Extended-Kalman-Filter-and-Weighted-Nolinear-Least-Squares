@@ -1,4 +1,4 @@
-# Simulation of 2 dimensional Simultaneous Localization And Mapping based on Extended Kalman Filter and Weighted Nolinear Least Squares
+# Simulation of 2 dimensional SLAM based on Extended Kalman Filter and Weighted Nolinear Least Squares
 
 |![image](https://github.com/JiadingWen/Simulation_2D_SLAM/blob/master/img/ScreenShot1.gif)|![image](https://github.com/JiadingWen/Simulation_2D_SLAM/blob/master/img/ScreenShot2.gif)|
 | - | :-: |
