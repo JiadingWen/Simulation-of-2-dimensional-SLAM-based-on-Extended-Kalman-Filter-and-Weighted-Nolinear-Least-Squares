@@ -1,6 +1,6 @@
 # Simulation of 2 dimensional SLAM based on Extended Kalman Filter and Weighted Nolinear Least Squares
 
-|![image](https://github.com/JiadingWen/Simulation_2D_SLAM/blob/master/img/ScreenShot1.gif)|![image](https://github.com/JiadingWen/Simulation_2D_SLAM/blob/master/img/ScreenShot2.gif)|
+|![image](https://github.com/JiadingWen/Simulation-of-2-dimensional-SLAM-based-on-Extended-Kalman-Filter-and-Weighted-Nolinear-Least-Squares/blob/master/img/ScreenShot1.gif)|![image](https://github.com/JiadingWen/Simulation-of-2-dimensional-SLAM-based-on-Extended-Kalman-Filter-and-Weighted-Nolinear-Least-Squares/blob/master/img/ScreenShot2.gif)|
 | - | :-: |
 
 <p align="center">Blue circle is real pose of the robot, red circle is estimated pose of the robot</p>
